@@ -1,0 +1,87 @@
+<section id="introduction">
+  <h1>Concerned</h2>
+
+  <p>
+    I thought that you might be interested to know these statistics about a
+    newly-created Rails 4.1 application, with only this view, an empty
+    controller, and an empty model.
+  </p>
+  <p>
+    For comparison, the smallest subclass of object you could create in Ruby
+    2.1.1 (<tt>MyClass = Class.new</tt>) has:
+    <!--
+      These were gathered from bin/the_littlest_class to avoid collecting info
+      from irb/Rails additions.
+    -->
+    <ul>
+      <li><b>4</b> ancestors.</li>
+      <li><b>99</b> public/protected class methods.</li>
+      <li><b>90</b> private class methods.</li>
+      <li><b>55</b> public/protected instance methods.</li>
+      <li><b>72</b> private instance methods.</li>
+    </ul>
+  </p>
+</section>
+
+<hr>
+
+<section id="statistics">
+
+  <article>
+    <h1>Model</h1>
+
+    <h2>Class</h2>
+    <ul>
+      <li><b><%= Concern.ancestors.size %></b> ancestors.</li>
+      <li><b><%= Concern.methods.size %></b> public/protected methods.</li>
+      <li><b><%= Concern.private_methods.size %></b> private methods.</li>
+    </ul>
+
+    <h2>Instance</h2>
+    <ul>
+      <li><b><%= Concern.new.methods.size %></b> public/protected methods.</li>
+      <li><b><%= Concern.new.private_methods.size %></b> private methods.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h1>View</h1>
+
+    <h2>Class</h2>
+    <ul>
+      <li><b><%= self.class.ancestors.size %></b> ancestors.</li>
+      <li><b><%= self.class.methods.size %></b> public/protected methods.</li>
+      <li><b><%= self.class.private_methods.size %></b> private methods.</li>
+    </ul>
+
+    <h2>Instance</h2>
+    <ul>
+      <li><b><%= self.methods.size %></b> public/protected methods.</li>
+      <li><b><%= self.private_methods.size %></b> private methods.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h1>Controller</h1>
+
+    <h2>Class</h2>
+    <ul>
+      <li><b><%= controller.class.ancestors.size %></b> ancestors.</li>
+      <li>
+        <b><%= controller.class.methods.size %></b> public/protected
+        methods.
+      </li>
+      <li>
+        <b><%= controller.class.private_methods.size %></b> private
+        methods.
+      </li>
+    </ul>
+
+    <h2>Instance</h2>
+    <ul>
+      <li><b><%= controller.methods.size %></b> public/protected methods.</li>
+      <li><b><%= controller.private_methods.size %></b> private methods.</li>
+    </ul>
+  </article>
+
+</section>

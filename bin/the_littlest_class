@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+MyObject = Class.new
+
+puts "#{MyObject.ancestors.size} ancestors."
+puts "#{MyObject.methods.size} public/protected class methods."
+puts "#{MyObject.private_methods.size} private class methods."
+puts "#{MyObject.new.methods.size} public/protected instance methods."
+puts "#{MyObject.new.private_methods.size} private instance methods."
