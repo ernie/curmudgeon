@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Curmudgeon</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+<title>Curmudgeon</title>
+<style>
+  body {
+    font-family: sans-serif;
+  }
+  #introduction p {
+    font-size: 1.1em;
+    font-style: italic;
+  }
+  article {
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.25em;
+  }
+  ul {
+    padding-left: 1.5em;
+  }
+</style>
 </head>
 <body>
 
